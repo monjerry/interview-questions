@@ -39,4 +39,5 @@ def palindrome2(s):
 
 # Can be either an array of ints or a string
 st = [1, 1, 4, 1]
+print palindrome(st, 0, len(st)-1)
 print palindrome2(st)

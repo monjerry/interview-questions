@@ -25,8 +25,9 @@ def maxSumSkipOne2(arr):
         else:
             count = skip
             skip = newCount
+        print 'i {} count {} skip {}'.format(i, count, skip)
     return count
-arr = [4, 5, -2, -10, -11, -6, 4, 5]
+arr = [5, 5, -12, -1, -1, -6, 5, 5]
 
 print maxSumSkipOne(arr)
 print maxSumSkipOne2(arr)
