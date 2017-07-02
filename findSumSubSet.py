@@ -1,3 +1,8 @@
+def printMatrix(arr):
+    for row in arr:
+        print row
+
+
 def findSubSetSum(arr, sumToFind):
     opts = []
     for x in arr:
@@ -6,7 +11,8 @@ def findSubSetSum(arr, sumToFind):
             tmp.append(None)
         tmp[0] = True
         opts.append(tmp)
-
+    print 'We will start with this matrix'
+    printMatrix(opts)
     for i in range(len(arr)):
         for j in range(1, sumToFind + 1):
             if arr[i] > j:
@@ -21,6 +27,8 @@ def findSubSetSum(arr, sumToFind):
                     opts[i][j] = opts[i-1][j-arr[i]]
                 else:
                     opts[i][j] = False
+    print 'Final matrix'
+    printMatrix(opts)
     if opts[len(arr) -1][sumToFind]:
         res = []
         j = sumToFind
@@ -38,8 +46,8 @@ def findSubSetSum(arr, sumToFind):
     else:
         return False, []
 
-arr = [2, 3, 7, 10, 21,23, 44]
-suma = 49
+arr = [1, 2, 3, 4, 5, 21,23, 44]
+suma = 9
 
 print findSubSetSum(arr, suma)
 
