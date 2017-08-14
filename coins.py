@@ -14,7 +14,7 @@ def findCoins(suma, coins):
             print 'These are the coins {}'.format(coins)
             print 'If the coin {} is less than the number we are looking for {} it means maybe we can add up to that number'.format(coin, i)
             if coin <= i:
-                print 'Maybe we can add up to this coin, lets see if the value - the coin {} - {} is less than the number of coins we already found'
+                print 'Maybe we can add up to this coin, lets see if the value - the coin {} - {} is less than the number of coins we already found'.format(i, coin)
                 nCoins = min(nCoins, opts[i-coin] + 1)
             print 'We can form {} with {} coins'.format(i, nCoins)
             opts[i] = nCoins
